@@ -29,7 +29,7 @@ type Props<T extends Route> = PagerCommonProps & {
       jumpTo: (key: string) => void;
     }
   ) => React.ReactNode;
-  style?: object;
+  style?: StyleProp<ViewStyle>;
   orientation?: 'vertical' | 'horizontal';
   transitionStyle?: 'scroll' | 'curl';
   showPageIndicator?: boolean;
