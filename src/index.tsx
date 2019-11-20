@@ -29,11 +29,11 @@ type Props<T extends Route> = PagerCommonProps & {
       jumpTo: (key: string) => void;
     }
   ) => React.ReactNode;
+  style?: object;
   orientation?: 'vertical' | 'horizontal';
   transitionStyle?: 'scroll' | 'curl';
   showPageIndicator?: boolean;
   pageMargin?: number;
-  backgroundColor?: string;
 };
 
 const { event, add } = Animated;
@@ -149,6 +149,7 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
 
   render() {
     const {
+      style,
       keyboardDismissMode,
       swipeEnabled,
       children,
@@ -156,7 +157,6 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
       transitionStyle,
       showPageIndicator,
       pageMargin,
-      backgroundColor,
     } = this.props;
 
     return children({
@@ -168,7 +168,7 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
         <AnimatedViewPager
           ref={this.ref}
           lazy={false}
-          style={{ flex: 1, backgroundColor }}
+          style={{ flex: 1, ...style }}
           initialPage={this.props.navigationState.index}
           keyboardDismissMode={
             // ViewPager does not accept auto mode
@@ -184,7 +184,6 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
           transitionStyle={transitionStyle}
           showPageIndicator={showPageIndicator}
           pageMargin={pageMargin}
-          backgroundColor={backgroundColor}
         >
           {children}
         </AnimatedViewPager>
