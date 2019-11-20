@@ -80,8 +80,14 @@ export default function MaterialTopTabsScreen() {
 }
 ```
 
+## Installation
+```
+yarn add react-native-tab-view-viewpager-adapter
+```
+Also, you need to set up [React Native View Pager](https://github.com/react-native-community/react-native-viewpager)
+
 ## Note
-`renderPager` prop in [React Native Tab View](https://github.com/react-native-community/react-native-viewpager) is available only from version [2.11.0](https://github.com/react-native-community/react-native-tab-view/commit/429fab86b66ad19dd3a76d4c460e62e15e9f9535)
+`renderPager` prop in [React Native Tab View](https://github.com/react-native-community/react-tab-view) is available only from version [2.11.0](https://github.com/react-native-community/react-native-tab-view/commit/429fab86b66ad19dd3a76d4c460e62e15e9f9535)
 
 ## Example
 We created a React Native example which can be run with following commands:
