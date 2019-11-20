@@ -46,10 +46,13 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
   };
 
   componentDidUpdate(prevProps: Props<T>) {
-    if (prevProps.navigationState.index !== this.props.navigationState.index) {
-      // If the screen was change with gesture it's no-op
+    if (
+      prevProps.navigationState.index !== this.props.navigationState.index &&
+      !this.justScrolled
+    ) {
       this.jumpToIndex(this.props.navigationState.index);
     }
+    this.justScrolled = false;
   }
 
   private enterListeners: Listener[] = [];
@@ -105,6 +108,7 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
 
   private currentIndex = new Animated.Value(this.props.navigationState.index);
   private offset = new Animated.Value(0);
+  private justScrolled = false;
 
   private onPageScroll = event([
     {
@@ -126,13 +130,17 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
     }
   };
 
+  private onIndexChange(newPosition: number) {
+    this.justScrolled = true;
+    this.props.onIndexChange(newPosition);
+  }
+
   ref = React.createRef<any>();
 
   render() {
     const {
       keyboardDismissMode,
       swipeEnabled,
-      onIndexChange,
       children,
       orientation,
       transitionStyle,
@@ -157,7 +165,7 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
           }
           onPageScroll={this.onPageScroll}
           onPageSelected={(e: { nativeEvent: { position: number } }) =>
-            onIndexChange(e.nativeEvent.position)
+            this.onIndexChange(e.nativeEvent.position)
           }
           onPageScrollStateChanged={this.onPageScrollStateChanged}
           scrollEnabled={swipeEnabled}
