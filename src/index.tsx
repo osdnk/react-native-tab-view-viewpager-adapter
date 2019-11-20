@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Keyboard, StyleProp } from 'react-native';
+import { Keyboard, StyleProp, ViewStyle } from 'react-native';
 import ViewPager from '@react-native-community/viewpager';
 import Animated from 'react-native-reanimated';
 
@@ -168,7 +168,7 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
         <AnimatedViewPager
           ref={this.ref}
           lazy={false}
-          style={{ flex: 1, ...style }}
+          style={[{ flex: 1 }, style]}
           initialPage={this.props.navigationState.index}
           keyboardDismissMode={
             // ViewPager does not accept auto mode
