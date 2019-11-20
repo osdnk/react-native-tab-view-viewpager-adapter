@@ -27,6 +27,7 @@ However, there are few more additional props:
 
 |Prop|Description|Platform|
 |-|:-----:|:---:|
+|`style: object`|Style to apply to ViewPager|both
 |`pageMargin: number`|Blank space to be shown between pages|both
 |`orientation: Orientation`|Set `horizontal` or `vertical` scrolling orientation (it does **not** work dynamically)|both
 |`transitionStyle: TransitionStyle`|Use `scroll` or `curl` to change transition style (it does **not** work dynamically)|iOS

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Keyboard } from 'react-native';
+import { Keyboard, StyleProp } from 'react-native';
 import ViewPager from '@react-native-community/viewpager';
 import Animated from 'react-native-reanimated';
 
@@ -29,6 +29,7 @@ type Props<T extends Route> = PagerCommonProps & {
       jumpTo: (key: string) => void;
     }
   ) => React.ReactNode;
+  style?: StyleProp<ViewStyle>;
   orientation?: 'vertical' | 'horizontal';
   transitionStyle?: 'scroll' | 'curl';
   showPageIndicator?: boolean;
@@ -148,6 +149,7 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
 
   render() {
     const {
+      style,
       keyboardDismissMode,
       swipeEnabled,
       children,
@@ -166,7 +168,7 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
         <AnimatedViewPager
           ref={this.ref}
           lazy={false}
-          style={{ flex: 1 }}
+          style={{ flex: 1, ...style }}
           initialPage={this.props.navigationState.index}
           keyboardDismissMode={
             // ViewPager does not accept auto mode
