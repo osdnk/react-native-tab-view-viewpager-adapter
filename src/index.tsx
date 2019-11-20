@@ -45,6 +45,13 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
     swipeEnabled: true,
   };
 
+  componentDidUpdate(prevProps: Props<T>) {
+    if (prevProps.navigationState.index !== this.props.navigationState.index) {
+      // If the screen was change with gesture it's no-op
+      this.jumpToIndex(this.props.navigationState.index);
+    }
+  }
+
   private enterListeners: Listener[] = [];
 
   private jumpToIndex = (index: number) => {
