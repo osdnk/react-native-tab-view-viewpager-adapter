@@ -1,6 +1,6 @@
 {
   "name": "react-native-tab-view-viewpager-adapter",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "lib/commonjs/index.js",
   "react-native": "lib/module/index.js",
