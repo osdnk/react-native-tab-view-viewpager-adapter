@@ -14,7 +14,7 @@ import ViewPagerAdapter from 'react-native-tab-view-viewpager-adapter';
   renderScene={() => {/* render */}}
   renderTabBar={() => null}
   renderPager={props => (
-    <ViewPagerAdapter {...props} transitionStyle="curl" showPageIndicator />
+    <ViewPagerAdapter {...props} transition="curl" showPageIndicator />
   )}
 />
 
@@ -27,10 +27,10 @@ However, there are few more additional props:
 
 |Prop|Description|Platform|
 |-|:-----:|:---:|
-|`style: object`|Style to apply to ViewPager|both
+|`style: Style`|Style to apply to ViewPager|both
 |`pageMargin: number`|Blank space to be shown between pages|both
 |`orientation: Orientation`|Set `horizontal` or `vertical` scrolling orientation (it does **not** work dynamically)|both
-|`transitionStyle: TransitionStyle`|Use `scroll` or `curl` to change transition style (it does **not** work dynamically)|iOS
+|`transition: string `|Use `scroll` or `curl` to change transition style (it does **not** work dynamically)|iOS
 |`showPageIndicator: boolean`|Shows the dots indicator at the bottom of the view|iOS
 
 You can find more resources in [React Native ViewPager documentation](https://github.com/react-native-community/react-native-viewpager)

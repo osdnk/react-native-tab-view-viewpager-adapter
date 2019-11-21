@@ -51,7 +51,7 @@ export default function MyPager() {
         setNavigation({ ...navigation, index: index });
       }}
       renderPager={props => (
-        <ViewPagerAdapter {...props} transitionStyle="curl" showPageIndicator />
+        <ViewPagerAdapter {...props} transition="curl" showPageIndicator />
       )}
     />
   );

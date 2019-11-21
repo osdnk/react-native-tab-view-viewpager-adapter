@@ -31,7 +31,7 @@ type Props<T extends Route> = PagerCommonProps & {
   ) => React.ReactNode;
   style?: StyleProp<ViewStyle>;
   orientation?: 'vertical' | 'horizontal';
-  transitionStyle?: 'scroll' | 'curl';
+  transition?: 'scroll' | 'curl';
   showPageIndicator?: boolean;
   pageMargin?: number;
 };
@@ -154,7 +154,7 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
       swipeEnabled,
       children,
       orientation,
-      transitionStyle,
+      transition,
       showPageIndicator,
       pageMargin,
     } = this.props;
@@ -181,7 +181,7 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
           onPageScrollStateChanged={this.onPageScrollStateChanged}
           scrollEnabled={swipeEnabled}
           orientation={orientation}
-          transitionStyle={transitionStyle}
+          transitionStyle={transition}
           showPageIndicator={showPageIndicator}
           pageMargin={pageMargin}
         >
