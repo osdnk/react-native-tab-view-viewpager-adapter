@@ -1064,10 +1064,9 @@
     xcode "^2.0.0"
     xmldoc "^0.4.0"
 
-"@react-native-community/viewpager@^3.1.0":
+"@react-native-community/viewpager@react-native-community/react-native-viewpager":
   version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@react-native-community/viewpager/-/viewpager-3.1.0.tgz#b33f80452bfb68c76a2501964c731f8a1b0c13b2"
-  integrity sha512-sWSlbjROjo8hrH7KNLfbUMX7SR0UjTCZsr7gTnItaFXOY5RVoe05ucrLjo8K64cX1ZnzTZiswHGdLteJ4XPMwg==
+  resolved "https://codeload.github.com/react-native-community/react-native-viewpager/tar.gz/e70c315e16a547f448402eee70529ec73c5a3f88"
 
 "@types/babel__core@^7.1.0":
   version "7.1.3"
