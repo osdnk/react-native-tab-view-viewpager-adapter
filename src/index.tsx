@@ -48,12 +48,6 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
   };
 
   componentDidUpdate(prevProps: Props<T>) {
-    console.log(
-      prevProps.navigationState.index,
-      this.props.navigationState.index,
-      this.justScrolled
-    );
-
     if (
       prevProps.navigationState.index !== this.props.navigationState.index &&
       !this.justScrolled
