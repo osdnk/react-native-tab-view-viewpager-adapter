@@ -51,7 +51,7 @@ const SwipeStack = createMaterialTopTabNavigator(
     },
   },
   {
-    renderPager: props => <ViewPagerAdapter {...props} />
+    pagerComponent: ViewPagerAdapter
   }
 );
 ```
@@ -65,7 +65,7 @@ const MaterialTopTabs = createMaterialTopTabNavigator<MaterialTopTabParams>();
 export default function MaterialTopTabsScreen() {
   return (
     <MaterialTopTabs.Navigator
-      renderPager={props => <ViewPagerAdapter {...props} />}
+      pager={props => <ViewPagerAdapter {...props} />}
     >
       <MaterialTopTabs.Screen
         name="A"
