@@ -36,7 +36,7 @@ However, there are few more additional props:
 
 You can find more resources in [React Native ViewPager documentation](https://github.com/react-native-community/react-native-viewpager)
 
-## Usage with React Navigation < 5
+## Usage with React Navigation <3
 
 ```jsx harmony
 const SwipeStack = createMaterialTopTabNavigator(
