@@ -2,7 +2,7 @@
 This library is an adapter that allows for utilizing [React Native ViewPager](https://github.com/react-native-community/react-native-viewpager) in  [React Native Tab View](https://github.com/react-native-community/react-native-tab-view). With this package, you can replace existing pager responsible for scrolling experience with a purely native one.
 
 ## Motivation
-[React Native ViewPager](https://github.com/react-native-community/react-native-viewpager) under the hood uses native `UIViewPagerController` on iOS and `ViewPager` on Android. Although it's not that customizable as [React Native Tab View's](https://github.com/react-native-community/react-native-viewpager) Pager built with [Reanimated](https://github.com/kmagiera/react-native-reanimated) and [Gesture Handler](https://github.com/kmagiera/react-native-gesture-handler), it can deliver a bit better native feeling and expose some options not available in TabView by default.
+[React Native ViewPager](https://github.com/react-native-community/react-native-viewpager) under the hood uses native `UIViewPagerController` on iOS and `ViewPager` on Android. Although it's not that customizable as [React Native Tab View's](https://github.com/react-native-community/react-native-tab-view) Pager built with [Reanimated](https://github.com/kmagiera/react-native-reanimated) and [Gesture Handler](https://github.com/kmagiera/react-native-gesture-handler), it can deliver a bit better native feeling and expose some options not available in TabView by default.
 
 ## Usage
 ```jsx harmony
@@ -89,7 +89,7 @@ yarn add react-native-tab-view-viewpager-adapter
 Also, you need to set up [React Native View Pager](https://github.com/react-native-community/react-native-viewpager)
 
 ## Note
-`renderPager` prop in [React Native Tab View](https://github.com/react-native-community/react-tab-view) is available only from version [2.11.0](https://github.com/react-native-community/react-native-tab-view/commit/429fab86b66ad19dd3a76d4c460e62e15e9f9535)
+`renderPager` prop in [React Native Tab View](https://github.com/react-native-community/react-native-tab-view) is available only from version [2.11.0](https://github.com/react-native-community/react-native-tab-view/commit/429fab86b66ad19dd3a76d4c460e62e15e9f9535)
 
 ## Example
 We created a React Native example which can be run with following commands:
