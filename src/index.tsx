@@ -35,6 +35,7 @@ type Props<T extends Route> = PagerCommonProps & {
   showPageIndicator?: boolean;
   pageMargin?: number;
   overdrag?: boolean;
+  overScrollMode?: "always" | "never" | "auto";
 };
 
 const { event, add } = Animated;
@@ -153,6 +154,7 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
       showPageIndicator,
       pageMargin,
       overdrag,
+      overScrollMode,
     } = this.props;
 
     return children({
@@ -181,6 +183,7 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
           showPageIndicator={showPageIndicator}
           pageMargin={pageMargin}
           overdrag={overdrag}
+          overScrollMode={overScrollMode}
         >
           {children}
         </AnimatedViewPager>
