@@ -35,7 +35,7 @@ type Props<T extends Route> = PagerCommonProps & {
   showPageIndicator?: boolean;
   pageMargin?: number;
   overdrag?: boolean;
-  overScrollMode?: "always" | "never" | "auto";
+  overScrollMode?: 'always' | 'never' | 'auto';
 };
 
 const { event, add } = Animated;
