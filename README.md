@@ -33,6 +33,7 @@ However, there are few more additional props:
 |`transition: string `|Use `scroll` or `curl` to change transition style (it does **not** work dynamically)|iOS
 |`showPageIndicator: boolean`|Shows the dots indicator at the bottom of the view|iOS
 |`overdrag: boolean`|Allows for overscrolling after reaching the end or very beginning of pages|iOS
+|`overScrollMode: OverScollMode`|Used to override default value of overScroll mode. Can be auto, always or never. Defaults to auto	|Android
 
 You can find more resources in [React Native ViewPager documentation](https://github.com/react-native-community/react-native-viewpager)
 
