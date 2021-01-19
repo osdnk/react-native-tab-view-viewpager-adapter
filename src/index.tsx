@@ -63,7 +63,7 @@ export default class ViewPagerBackend<T extends Route> extends React.Component<
   private jumpToIndex = (index: number) => {
     // If the index changed, we need to trigger a tab switch
     // this.isSwipeGesture.setValue(FALSE);
-    this.ref.current.getNode().setPage(index);
+    this.ref.current.setPage(index);
   };
 
   private jumpTo = (key: string) => {
