@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Keyboard, StyleProp, ViewStyle } from 'react-native';
-import ViewPager from '@react-native-community/viewpager';
+import ViewPager from 'react-native-pager-view';
 import Animated from 'react-native-reanimated';
 
 import {
